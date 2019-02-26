@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "pocket-proxy",
+  "builds": [{ "src": "*.js", "use": "@now/node" }],
+  "routes": [
+    { "src": "/login", "dest": "/oauth-login.js" },
+    {
+      "src": "/callback",
+      "methods": ["POST"],
+      "dest": "/oauth-callback.js"
+    }
+  ]
+}
